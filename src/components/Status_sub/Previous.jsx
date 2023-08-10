@@ -9,7 +9,11 @@ const Previous = (props) => {
             <h4>Previous Questions</h4>
             {Prev_que.map((que) => {
                 return (
-                    <p>{que}</p>
+
+                    <div className="Previous_item_class">
+                    <p className="Previous_item">{que}</p>
+                    <img className="Common_item_img" src="./images/question.png"></img>
+                    </div>
                 )
             })}
 

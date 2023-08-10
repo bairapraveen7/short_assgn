@@ -20,11 +20,12 @@ function App() {
   return (
     <>
     
-    <h1 style={{"textAlign":"center"}}>Dj bravo</h1>
+    <h1 style={{"textAlign":"center"}}>Aganitha's chatbot</h1>
     
     <div className='Entire'>
     <Stats Prev_que={Que_arr} />
-    <Chat setAppquest={setAppquest} setArr={setArr}/>
+    <Chat setAppquest={setAppquest} setArr={setArr} Questions={Que_arr}/>
+    <Customise />
     </div>
 
     </>
