@@ -2,6 +2,9 @@
 .Chat{
   display:flex;
   justify-content: center;
+  align-items: flex-start;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .Chat_img{
@@ -10,6 +13,30 @@
 }
 
 .Chat_input{
-  width:70%;
+  width:100%;
   margin:0.5em;
+
+}
+
+.Common{
+  height: 300px;
+  overflow: scroll;
+  text-align: center;
+  background-color: rgb(245, 242, 237);
+}
+
+.Comm_prev{
+  border: 2px solid rgb(178, 174, 174);
+  width:25%;
+}
+
+.Entire{
+  display: flex;
+}
+
+.Previous{
+  height: 300px;
+  overflow: scroll;
+  text-align: center;
+  background-color: rgb(201, 204, 207);
 }

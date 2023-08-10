@@ -1,16 +1,21 @@
 import React from "react";
+import { useState } from "react";
 
-const Chat = () => {
+const Chat = (props) => {
 
-    const changeit = (e) => {
+    const setAppquest = props.setAppquest;
 
+    const setArr = props.setArr;
 
-        
-    }
+    const submit = () => {
 
-    const submit = (e) => {
+        const quest = document.getElementsByClassName("Chat_input")[0].value;
 
-          console.log("hi I am good");
+        document.getElementsByClassName("Chat_input")[0].value = "";
+    
+        setAppquest(quest);
+
+        setArr((prev) => [...prev,quest]);
 
     }
 
@@ -18,7 +23,7 @@ const Chat = () => {
         <div className="Chat">
         
         <img className="Chat_img" src="./images/P_logo.jpeg" alt="Person_logo"></img>
-        <input className="Chat_input" type="text" onChange={changeit}></input>
+        <input className="Chat_input" type="text" onKeyDown={ (e) => {e.key == "Enter" && submit()}}></input>
         <img className="Chat_img" src="./images/send.jpeg" onClick={submit} alt="Send logo"></img>
         
         </div>
