@@ -10,8 +10,8 @@ function Common(){
         {Common_que.map((item) => {
             return (
                 <div className="Common_item_class">
-                <p className="Common_item">{item}</p>
-                <img className="Common_item_img" src="./images/question.png"></img>
+                <p className="Common_item">{item.substr(0,35) + (item.substr(35) && "...")}</p>
+                {/* <img className="Common_item_img" src="./images/question.png"></img> */}
                 </div>
             )
         })}

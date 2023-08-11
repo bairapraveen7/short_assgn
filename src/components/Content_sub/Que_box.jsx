@@ -21,7 +21,7 @@ function Que_box(props){
         </div>
 
         <div className="grid4">
-            <p>{arr[3]}</p>
+            <p className="Chat_output_p">{arr[3]}</p>
         </div>
 
         

@@ -18,7 +18,8 @@ const Common_que = [
     "What's a place you'd love to visit but haven't had the chance to?",
     "What's your go-to karaoke song?",
     "What's the last TV show you binge-watched?",
-    "If you could meet any historical figure, who would it be?"
+    "If you could meet any historical figure, who would it be?",
+    "hello mawa"
   ]
   
 

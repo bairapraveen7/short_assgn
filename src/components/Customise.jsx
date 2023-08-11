@@ -1,8 +1,42 @@
 import React from "react";
+import "typeface-roboto"
 
 const Customise = () => {
 
    let toggle = 0;
+
+   function Customise_set_font()
+   {
+      const elements = document.getElementsByClassName("Chat_output_p");
+      for(const ele of elements)
+      {
+        ele.style.fontFamily = 'typeface-roboto';
+      }
+      
+   }
+
+   function Customise_set_sizef()
+   {
+
+    const elements = document.getElementsByClassName("Chat_output_p");
+
+    for(const ele of elements)
+    {
+      ele.style.fontSize = '2em';
+    }
+
+
+   }
+
+   function Customise_set_img(){
+
+      const elements = document.getElementsByClassName("Content_img1");
+      for(const ele of elements)
+      {
+        ele.src="/images/M1.png";
+      }
+
+   }
 
     function toggleit(e)
     {
@@ -47,38 +81,43 @@ const Customise = () => {
                 <li className="Customise_font"><a href="#">Font family</a>
                 
                 <div className="Customise_font_family"> 
-                <p>Roboto</p>
-                <p>Sans-serif</p>
-                <p>Monteserrat</p>
-                <p>hillac</p>
-                <p>hillab</p>
+                <p onClick={Customise_set_font}>Roboto</p>
+                <p onClick={Customise_set_font}>Sans-serif</p>
+                <p onClick={Customise_set_font}>Monteserrat</p>
+                <p onClick={Customise_set_font}>hillac</p>
+                <p onClick={Customise_set_font}>hillab</p>
                 </div>
                 
                 </li>
                 <li className="Customise_fsize"><a href="#">Font-size</a>
                 
                 <div className="Customise_font_size">
-                <p>2em</p>
-                <p>3em</p>
-                <p>4em</p>
+                <p onClick={Customise_set_sizef}>2em</p>
+                <p onClick={Customise_set_sizef}>3em</p>
+                <p onClick={Customise_set_sizef}>4em</p>
                 </div>
                 
                 </li>
-                <div className="Customise_font_size">
-                <p>2em</p>
-                <p>3em</p>
-                <p>4em</p>
-                </div>
 
                 <li className="Customise_clogo"><a href="#">Choose Logo</a>
                 
                 <div className="Customise_logo">
 
-                  <img className="Customise_logo_ag" src="/images/ag.png"></img>
-                  <img className="Customise_logo_ag" src="/images/ag.png"></img>
-                  <img className="Customise_logo_ag" src="/images/ag.png"></img>
-                  <img className="Customise_logo_ag" src="/images/ag.png"></img>
-                  <img className="Customise_logo_ag" src="/images/ag.png"></img>
+                 <div onClick={Customise_set_img}>
+                  <img className="Customise_logo_ag" src="/images/M1.png"></img>
+                  </div>
+                <div>
+                  <img className="Customise_logo_ag" src="/images/M2.png"></img>
+                  </div>
+                <div>
+                  <img className="Customise_logo_ag" src="/images/M3.png"></img>
+                </div>
+                <div>
+                  <img className="Customise_logo_ag" src="/images/F1.png"></img>
+                </div>
+                <div>
+                  <img className="Customise_logo_ag" src="/images/F2.jpg"></img>
+                  </div>
 
                 </div>
                 

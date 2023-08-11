@@ -11,8 +11,8 @@ const Previous = (props) => {
                 return (
 
                     <div className="Previous_item_class">
-                    <p className="Previous_item">{que}</p>
-                    <img className="Previous_item_img" src="./images/question.png"></img>
+                    <p className="Previous_item">{que.substr(0,25)+(que.substr(25) && "...")}</p>
+                    {/* <img className="Previous_item_img" src="./images/question.png"></img> */}
                     </div>
                 )
             })}
