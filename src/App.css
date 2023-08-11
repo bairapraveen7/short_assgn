@@ -39,13 +39,14 @@
 .Common_item_class{
   background-color: #dbdad7;
   border-radius: 10px;
-  margin-top: 1em;
+  padding-top:0.7em;
+  margin-top:0.7em;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.Common_item_img{
+.Common_item_img,.Previous_item_img{
   width:1.2em;
   height:1.2em;
 }
@@ -72,18 +73,68 @@
 
 
 .Content_img2{
-
     height:2.2em;
     width:2.2em;
-
 }
 
 .Customise{
-  width:25%;
+  width: 25%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: gainsboro;
+    border-radius: 20px;
+}
+
+.Customise_font:hover .Customise_font_family{
+  display:block;
+}
+
+.Customise_fsize:hover .Customise_font_size{
+  display: block;
+}
+
+.Customise_clogo:hover .Customise_logo{
+  display:block;
+}
+
+.Customise_font_family,.Customise_font_size,.Customise_logo{
+  display: none;
+  background-color: white;
   margin-right:1em;
-  background-color: gainsboro;
-  text-align: center;
-  border-radius: 20px;
+  border-radius: 10px;
+}
+
+.Customise_font_family p:hover{
+  cursor:pointer;
+  background-color: #c7c6c4;
+}
+
+.Customise_font_size p:hover{
+  cursor:pointer;
+  background-color: #c7c6c4;
+}
+
+.Customise_logo_ag{
+  display:block;
+  width:1.2em;
+  height:1.2em;
+  margin-left: auto;
+  margin-top:1em;
+  margin-bottom:0.5em;
+  margin-right:auto;
+}
+
+.Customise nav ul{
+  list-style-type: none;
+}
+
+.Customise nav ul li{
+  margin:1em 0em 1em 0em;
+}
+
+.Customise nav ul li a{
+  text-decoration: none;
 }
 
 .Entire{
@@ -117,7 +168,7 @@
   height: 300px;
   overflow: scroll;
   text-align: center;
-  margin-top:1em;
+  margin-top:2.5em;
   border-radius:20px;
   background-color: rgb(201, 204, 207);
 }
@@ -125,8 +176,34 @@
 .Previous_item_class{
   background-color: #e7e6e3;
   border-radius: 10px;
-  margin-top: 1em;
+  padding-top:0.7em;
+  margin-top:0.7em;
   display: flex;
   justify-content: center;
   align-items: center;
 }
+
+.Previous_item{
+  align-content: center;
+}
+
+.toggle{
+  display:flex;
+  align-items: center;
+}
+
+.toggle_button{
+  width:4em;
+  height:2em;
+  border-radius: 1em;
+  background-color: #555553;
+}
+
+.toggle_inner_circle{
+  background-color: white;
+  width:2em;
+  height:2em;
+  border-radius: 4em;
+  transition: margin 0.5s;
+}
+

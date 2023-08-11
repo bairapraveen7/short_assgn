@@ -2,42 +2,94 @@ import React from "react";
 
 const Customise = () => {
 
+   let toggle = 0;
+
+    function toggleit(e)
+    {
+      
+        const toggle_button = document.getElementsByClassName("toggle_button")[0];
+
+        if(toggle == 0)
+        {
+            toggle = 1;
+            toggle_button.style.backgroundColor='blue';
+            e.target.style.marginLeft = "2em";
+        }
+        else{
+            toggle = 0;
+            toggle_button.style.backgroundColor='#555553';
+            e.target.style.marginLeft = "0em";
+        }
+
+       
+        
+    }
+
     return (
         <div className="Customise">
             <h4>Customise</h4>
-        <div> 
-        <p>Dark mode</p> 
-        </div>
-        <div class="dropdown">
-  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-    Dropdown button
-  </button>
-  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-    <a class="dropdown-item" href="#">Action</a>
-    <a class="dropdown-item" href="#">Another action</a>
-    <a class="dropdown-item" href="#">Something else here</a>
-  </div>
-</div>
-<div class="dropdown">
-  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-    Dropdown button
-  </button>
-  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-    <a class="dropdown-item" href="#">Action</a>
-    <a class="dropdown-item" href="#">Another action</a>
-    <a class="dropdown-item" href="#">Something else here</a>
-  </div>
-</div>
-<div class="dropdown">
-  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-    Dropdown button
-  </button>
-  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-    <a class="dropdown-item" href="#">Action</a>
-    <a class="dropdown-item" href="#">Another action</a>
-    <a class="dropdown-item" href="#">Something else here</a>
-  </div>
-</div>
+
+            <nav>
+
+             <ul>
+                <div className="toggle"> 
+                <li>Dark mode:</li>
+                <div className="toggle_button">
+
+                    <div onClick={toggleit} className="toggle_inner_circle">
+
+                    </div>
+
+                </div>
+                </div>
+
+
+                <li className="Customise_font"><a href="#">Font family</a>
+                
+                <div className="Customise_font_family"> 
+                <p>Roboto</p>
+                <p>Sans-serif</p>
+                <p>Monteserrat</p>
+                <p>hillac</p>
+                <p>hillab</p>
+                </div>
+                
+                </li>
+                <li className="Customise_fsize"><a href="#">Font-size</a>
+                
+                <div className="Customise_font_size">
+                <p>2em</p>
+                <p>3em</p>
+                <p>4em</p>
+                </div>
+                
+                </li>
+                <div className="Customise_font_size">
+                <p>2em</p>
+                <p>3em</p>
+                <p>4em</p>
+                </div>
+
+                <li className="Customise_clogo"><a href="#">Choose Logo</a>
+                
+                <div className="Customise_logo">
+
+                  <img className="Customise_logo_ag" src="/images/ag.png"></img>
+                  <img className="Customise_logo_ag" src="/images/ag.png"></img>
+                  <img className="Customise_logo_ag" src="/images/ag.png"></img>
+                  <img className="Customise_logo_ag" src="/images/ag.png"></img>
+                  <img className="Customise_logo_ag" src="/images/ag.png"></img>
+
+                </div>
+                
+                </li>
+
+                
+
+             </ul>
+
+            </nav>
+         
           </div>
     )
 

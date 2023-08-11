@@ -1,5 +1,6 @@
 import logo from './logo.svg';
 import './App.css';
+import 'bootstrap/dist/css/bootstrap.css'
 import { useEffect, useState } from 'react';
 import Chat from './components/Chat';
 import Content from './components/Content';
