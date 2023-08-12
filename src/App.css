@@ -1,8 +1,32 @@
 
+:root{
+  --Entire_background_color: none;
+  --Entire_background_image: none;
+  --Entire_text_color:black;
+  --Entire_chat_border:none;
+  --Entire_rem_border:none;
+}
+
+[dark-theme="dark"]{
+
+  --Entire_background_color: #2d3436;;
+  --Entire_background_image:linear-gradient(315deg, #2d3436 0%, #000000 74%);
+  --Entire_text_color:white;
+  --Entire_chat_border:2px solid white;
+  --Entire_rem_border:2px solid wheat;
+}
+
+*{
+  background-color: var(--Entire_background_color);
+  background-image: var(--Entire_background_image);
+  color:var(--Entire_text_color)
+}
+
 .Chat{
   width:50%;
   margin:0em 2em 0em 2em;
   padding: 1em;
+  border: var(--Entire_chat_border);
   border-radius: 20px;
   background-color: aliceblue;
   box-sizing: border-box;
@@ -25,6 +49,7 @@
 .Chat_img{
   width:1.2em;
   height:1.2em;
+  border-radius: 1em;
 }
 
 .Chat_input{
@@ -40,10 +65,12 @@
 }
 
 .Common{
-  height: 300px;
+  height: 350px;
   overflow: scroll;
   text-align: center;
   border-radius: 20px;
+  padding:1em 0.5em;
+  border: var(--Entire_rem_border);
   background-color: rgb(245, 242, 237);
 }
 
@@ -83,6 +110,7 @@
 .Content_img1{
   height:1.2em;
   width:1.2em;
+  border-radius: 1em;
 }
 
 
@@ -90,14 +118,17 @@
 .Content_img2{
     height:2.2em;
     width:2.2em;
+    border-radius: 1em;
 }
 
 .Customise{
   width: 25%;
   height:500px;
+  padding:1em 0.5em;
     display: flex;
     flex-direction: column;
     align-items: center;
+    border: var(--Entire_rem_border);
     background-color: gainsboro;
     border-radius: 20px;
 }
@@ -185,11 +216,13 @@
 }
 
 .Previous{
-  height: 300px;
+  height: 350px;
   overflow: scroll;
   text-align: center;
+  padding:1em 0.5em;
   margin-top:2.5em;
   border-radius:20px;
+  border: var(--Entire_rem_border);
   background-color: rgb(201, 204, 207);
 }
 
@@ -214,6 +247,7 @@
 .toggle_button{
   width:4em;
   height:2em;
+  margin-left:0.2em;
   border-radius: 1em;
   background-color: #555553;
 }

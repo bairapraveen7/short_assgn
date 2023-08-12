@@ -34,12 +34,17 @@ const Customise = (props) => {
             toggle = 1;
             toggle_button.style.backgroundColor='blue';
             e.target.style.marginLeft = "2em";
+            document.querySelector("body").setAttribute("dark-theme","dark");
+            
         }
         else{
             toggle = 0;
             toggle_button.style.backgroundColor='#555553';
             e.target.style.marginLeft = "0em";
+            document.querySelector("body").setAttribute("dark-theme","light");
+        
         }
+
 
        
         
@@ -64,7 +69,7 @@ const Customise = (props) => {
                 </div>
 
 
-                <li className="Customise_font"><a href="#">Font family</a>
+                <li className="Customise_font"><p>Font family</p>
                 
                 <div className="Customise_font_family"> 
                 <p onClick={Customise_set_font}>Sansserif</p>
@@ -75,7 +80,7 @@ const Customise = (props) => {
                 </div>
                 
                 </li>
-                <li className="Customise_fsize"><a href="#">Font-size</a>
+                <li className="Customise_fsize"><p>Font-size</p>
                 
                 <div className="Customise_font_size">
                 <p onClick={Customise_set_sizef}>0.8em</p>
@@ -85,7 +90,7 @@ const Customise = (props) => {
                 
                 </li>
 
-                <li className="Customise_clogo"><a href="#">Choose Logo</a>
+                <li className="Customise_clogo"><p>Choose Logo</p>
                 
                 <div className="Customise_logo">
 

@@ -27,7 +27,7 @@ function App() {
   return (
     <>
     
-    <h1 style={{"textAlign":"center"}}>Aganitha's chatbot</h1>
+    <h1 style={{"textAlign":"center","margin":"0.5em"}}>Aganitha's chatbot</h1>
     
     <div className='Entire'>
     <Stats Prev_que={Que_arr} />
