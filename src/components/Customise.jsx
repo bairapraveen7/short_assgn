@@ -51,25 +51,27 @@ const Customise = (props) => {
     }
 
     return (
+      <div className="Par_Customise_mob">
+
         <div className="Customise">
             <h4>Customise</h4>
 
             <nav>
 
-             <ul>
+             <div>
                 <div className="toggle Customise_font_li"> 
-                <li>Dark mode
+                 Dark mode
                 <div className="toggle_button">
 
                     <div onClick={toggleit} className="toggle_inner_circle">
 
                     </div>
 
-                </div></li>
+                </div> 
                 </div>
 
 
-                <li className="Customise_font"><div className="Customise_font_li"><p>Font family</p><img className="Customise_font_image" src="/images/d_arrow.png"></img></div>
+                <div className="Customise_font"><div className="Customise_font_li"><p>Font family</p><img className="Customise_font_image" src="/images/d_arrow.png"></img></div>
                 
                 <div className="Customise_font_family"> 
                 <p onClick={Customise_set_font}>Sansserif</p>
@@ -79,8 +81,8 @@ const Customise = (props) => {
                 <p onClick={Customise_set_font}>Libre Baskerville</p>
                 </div>
                 
-                </li>
-                <li className="Customise_fsize"><div className="Customise_font_li"><p>Font Size</p><img className="Customise_font_image" src="/images/d_arrow.png"></img></div>
+                </div>
+                <div className="Customise_fsize"><div className="Customise_font_li"><p>Font Size</p><img className="Customise_font_image" src="/images/d_arrow.png"></img></div>
                 
                 <div className="Customise_font_size">
                 <p onClick={Customise_set_sizef}>0.8em</p>
@@ -88,9 +90,9 @@ const Customise = (props) => {
                 <p onClick={Customise_set_sizef}>1.2em</p>
                 </div>
                 
-                </li>
+                </div>
 
-                <li className="Customise_clogo"><div className="Customise_font_li"><p>Choose logo</p><img className="Customise_font_image" src="/images/d_arrow.png"></img></div>
+                <div className="Customise_clogo"><div className="Customise_font_li"><p>Choose logo</p><img className="Customise_font_image" src="/images/d_arrow.png"></img></div>
                 
                 <div className="Customise_logo">
 
@@ -112,14 +114,20 @@ const Customise = (props) => {
 
                 </div>
                 
-                </li>
+                </div>
 
                 
 
-             </ul>
+             </div>
 
             </nav>
          
+          </div>
+
+          <div className="Par_Customise_image">
+        <img className="Par_customise_del_image" src="/images/ag.png"></img>
+      </div>
+
           </div>
     )
 

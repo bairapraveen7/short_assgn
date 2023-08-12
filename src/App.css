@@ -14,6 +14,9 @@
   --Customise_font_li_bg:#e7e6e3;
   --Customise_font_family_bg:white;
   --Customise_font_family_bg_hover:#c7c6c4;
+  --grid2_bg:rgb(204, 246, 246);
+  --grid4_bg:rgb(194, 230, 230);
+  --filtering_img:none;
 }
 
 
@@ -33,6 +36,9 @@
   --Customise_font_li_bg:#40414f;
   --Customise_font_family_bg:#202123;
   --Customise_font_family_bg_hover:#40414f;
+  --grid2_bg: #2e465f;
+  --grid4_bg:#333a95;
+  --filtering_img:invert(100%) sepia(0%) saturate(0%) hue-rotate(0deg);
 }
 
 
@@ -40,12 +46,14 @@
 *{
   margin:0;
   padding:0;
+ 
   color:var(--Entire_text_color);
 }
 
 body{
   background-color: var(--Entire_background_color);
   background-image: var(--Entire_background_image);
+  background-color: #F5F5F5;
   color:var(--Entire_text_color)
 }
 
@@ -78,11 +86,13 @@ body{
   width:1.2em;
   height:1.2em;
   border-radius: 1em;
+  filter: var(--filtering_img);
 }
 
 .Chat_input{
   width:100%;
   margin:0.5em;
+  border: 2px solid wheat;
   background-color:var(--Customise_font_family_bg);
 }
 
@@ -100,13 +110,21 @@ body{
   border-radius: 20px;
   padding:1em 0.5em;
   border: var(--Entire_rem_border);
-  background-color: rgb(245, 242, 237);
+  background-color: rgb(244 237 228);
   background-image: var(--Common_bg_image);
 }
 
 .Comm_prev{
   margin-left: 1em;
   width:25%;
+}
+
+.Comm_prev_del_image{
+  position: relative;
+  left:2em;
+  border:2px solid black;
+  width:1.5em;
+  height:1.5em;
 }
 
 .Common_item_class{
@@ -133,13 +151,15 @@ body{
   grid-gap:1em;
   justify-content: center;
   align-items:center;
-
+  isolation:isolate;
 }
 
 .Content_img1{
   height:1.2em;
   width:1.2em;
+  margin-left:1em;
   border-radius: 1em;
+  filter:var(--filtering_img)
 }
 
 
@@ -157,6 +177,7 @@ body{
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
     border: var(--Entire_rem_border);
     background-color: gainsboro;
     background-image: var(--Customise_bg_image);
@@ -179,14 +200,21 @@ body{
   background-color: var(--Customise_font_li_bg);
   padding:0.4em;
   border-radius: 1em;
+  margin-top:1em;
   display: flex;
- align-items: center;
+  justify-content: center;
+  align-items: center;
+}
+
+.Customise_font_li p{
+  align-items: center;
 }
 
 .Customise_font_family,.Customise_font_size,.Customise_logo{
   display: none;
   background-color:var(--Customise_font_family_bg);
   text-align:center;
+  padding:1em;
   border-radius: 10px;
 }
 
@@ -217,6 +245,11 @@ body{
   margin-top:1em;
   margin-bottom:0.5em;
   margin-right:auto;
+  filter:var(--filtering_img);
+}
+
+.Customise nav{
+  width:100%;
 }
 
 .Customise nav ul{
@@ -224,13 +257,24 @@ body{
   
 }
 
-.Customise nav ul li{
-  margin:1em 0em 1em 0em;
-  
-}
+ 
 
 .Entire{
   display: flex;
+  justify-content: stretch;
+}
+
+.fe_start_row{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.fe_start_row_image{
+  image-rendering: pixelated;
+  margin:0 1em 0 1em;
+  width:1.2em;
+  height:1.2em;
 }
 
 
@@ -242,7 +286,7 @@ body{
   grid-area:"tright";
   border-radius: 10px;
   padding:0.4em;
-  background-color: rgb(204, 246, 246);
+  background-color: var(--grid2_bg);
 }
 
 .grid3{
@@ -253,7 +297,16 @@ body{
   grid-area:"bright";
   border-radius: 10px;
   padding:0.4em;
-  background-color: rgb(194, 230, 230);
+  background-color: var(--grid4_bg);
+}
+
+.Par_customise_del_image{
+  width:1.2em;
+  height:1.2em;
+}
+
+.Par_customise_mob{
+  display: flex;
 }
 
 .Previous{
@@ -274,7 +327,13 @@ body{
   margin-top:0.7em;
   display:flex;
   justify-content:center;
-  align-content:center;
+}
+
+.Previous_item{
+  padding:0.5em;
+   margin-top:auto;
+   margin-bottom: auto;
+
 }
 
 .Previous_item_img{
@@ -300,5 +359,34 @@ body{
   height:2em;
   border-radius: 4em;
   transition: margin 0.5s;
+}
+
+
+/* Media queries are to be written at last to override 
+some properties */
+
+@media screen and (max-width:600px) {
+  .Comm_prev,.Customise{
+   border : 2px solid rgb(68, 66, 63);
+   border-radius: 1em;
+   display: none;
+   position: absolute;
+  }
+  .Chat{
+    position: relative;
+    width: 100%;
+  }
+}
+
+@media screen and (min-width:600px) {
+
+  .fe_start_row_image{
+    display: none;
+  }
+
+  .fe_start_row{
+    display: block;
+  }
+  
 }
 

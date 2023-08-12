@@ -24,11 +24,31 @@ function App() {
     console.log(Que_arr)
   },[Que_arr]);
 
+  function open_Common(){
+      const Comm_prev = document.getElementsByClassName("Comm_prev")[0];
+      console.log(Comm_prev);
+      Comm_prev.style.display = 'flex';
+      Comm_prev.style.zIndex = '1';
+  }
+
+  function open_Customise(){
+
+    const Comm_prev = document.getElementsByClassName("Customise")[0];
+      console.log(Comm_prev);
+      Comm_prev.style.display = 'flex';
+      Comm_prev.style.right = '0';
+      Comm_prev.style.zIndex = '1';
+
+  }
+
   return (
     <>
     
+    <div className='fe_start_row'>
+    <img className='fe_start_row_image' src="/images/ag.png" onClick={open_Common}></img>
     <h1 style={{"textAlign":"center","margin":"0.5em"}}>Aganitha's chatbot</h1>
-    
+    <img className='fe_start_row_image' src="/images/ag.png" onClick={open_Customise}></img>
+    </div>
     <div className='Entire'>
     <Stats Prev_que={Que_arr} />
     <Chat setAppquest={setAppquest} setArr={setArr} Questions={Que_arr} Variables={[P_logo,F_family,F_size]}/>

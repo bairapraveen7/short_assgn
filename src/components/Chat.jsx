@@ -17,7 +17,7 @@ const Chat = (props) => {
         const quest = document.getElementsByClassName("Chat_input")[0].value;
 
         document.getElementsByClassName("Chat_input")[0].value = "";
-    
+
         setAppquest(quest);
 
         setArr((prev) => [...prev,quest]);
@@ -30,7 +30,7 @@ const Chat = (props) => {
         
         <div className="Chat_img_input">
         <img className="Chat_img" src={Variables[0]} alt="Person_logo"></img>
-        <input className="Chat_input" type="text" onKeyDown={ (e) => {e.key == "Enter" && submit()}}></input>
+        <input className="Chat_input" type="text" onKeyDown={ (e) => {e.key == "Enter" && submit()}} />
         <img className="Chat_img" src="./images/send.jpeg" onClick={submit} alt="Send logo"></img>
         </div>
         </div>

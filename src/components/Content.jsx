@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useEffect } from "react";
+import { useRef } from "react";
 import Que_box from "./Content_sub/Que_box";
 
 const Content = (props) => {
@@ -6,6 +7,12 @@ const Content = (props) => {
     const Questions = props.Questions;
 
     const Variables = props.Variables;
+
+    const bottomRef = useRef(null);
+
+    useEffect(() => {
+        bottomRef.current?.scrollIntoView({behavior:'smooth'});
+    },[Questions]);
 
     return (
         <div className="Content">
@@ -21,6 +28,8 @@ const Content = (props) => {
                 
             })
         }
+
+        <div ref={bottomRef} />
 
          
         </div>
