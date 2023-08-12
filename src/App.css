@@ -5,18 +5,45 @@
   --Entire_text_color:black;
   --Entire_chat_border:none;
   --Entire_rem_border:none;
+  --Chat_bg_image:none;
+  --Common_bg_image:none;
+  --Previous_bg_image:none;
+  --Customise_bg_image:gainsboro;
+  --Common_item_class_bg:#dbdad7;
+  --Previous_item_class_bg:#e7e6e3;
+  --Customise_font_li_bg:#e7e6e3;
+  --Customise_font_family_bg:white;
+  --Customise_font_family_bg_hover:#c7c6c4;
 }
+
 
 [dark-theme="dark"]{
 
-  --Entire_background_color: #2d3436;;
+  --Entire_background_color: #2d3436;
   --Entire_background_image:linear-gradient(315deg, #2d3436 0%, #000000 74%);
   --Entire_text_color:white;
   --Entire_chat_border:2px solid white;
   --Entire_rem_border:2px solid wheat;
+  --Common_bg_image: linear-gradient(315deg, #2d3436 0%, #000000 74%);;
+  --Customise_bg_image: linear-gradient(315deg, #2d3436 0%, #000000 74%);
+  --Previous_bg_image: linear-gradient(315deg, #2d3436 0%, #000000 74%);
+  --Chat_bg_image:linear-gradient(315deg, #2d3436 0%, #000000 74%);
+  --Common_item_class_bg:#40414f;
+  --Previous_item_class_bg:#40414f;
+  --Customise_font_li_bg:#40414f;
+  --Customise_font_family_bg:#202123;
+  --Customise_font_family_bg_hover:#40414f;
 }
 
+
+
 *{
+  margin:0;
+  padding:0;
+  color:var(--Entire_text_color);
+}
+
+body{
   background-color: var(--Entire_background_color);
   background-image: var(--Entire_background_image);
   color:var(--Entire_text_color)
@@ -29,6 +56,7 @@
   border: var(--Entire_chat_border);
   border-radius: 20px;
   background-color: aliceblue;
+  background-image: var(--Chat_bg_image);
   box-sizing: border-box;
   position: relative;
 }
@@ -40,7 +68,7 @@
   background-repeat: no-repeat;
   background-position: center;
   content:'';
-  opacity: 0.2;
+  opacity: 0.1;
   position:absolute;
   inset:0;
 
@@ -55,6 +83,7 @@
 .Chat_input{
   width:100%;
   margin:0.5em;
+  background-color:var(--Customise_font_family_bg);
 }
 
 .Chat_img_input{
@@ -72,6 +101,7 @@
   padding:1em 0.5em;
   border: var(--Entire_rem_border);
   background-color: rgb(245, 242, 237);
+  background-image: var(--Common_bg_image);
 }
 
 .Comm_prev{
@@ -80,7 +110,7 @@
 }
 
 .Common_item_class{
-  background-color: #dbdad7;
+  background-color: var(--Common_item_class_bg);
   border-radius: 10px;
   padding-top:0.7em;
   margin-top:0.7em;
@@ -103,7 +133,6 @@
   grid-gap:1em;
   justify-content: center;
   align-items:center;
-  isolation: isolate;
 
 }
 
@@ -130,6 +159,7 @@
     align-items: center;
     border: var(--Entire_rem_border);
     background-color: gainsboro;
+    background-image: var(--Customise_bg_image);
     border-radius: 20px;
 }
 
@@ -145,26 +175,39 @@
   display:block;
 }
 
+.Customise_font_li{
+  background-color: var(--Customise_font_li_bg);
+  padding:0.4em;
+  border-radius: 1em;
+  display: flex;
+ align-items: center;
+}
+
 .Customise_font_family,.Customise_font_size,.Customise_logo{
   display: none;
-  background-color: white;
+  background-color:var(--Customise_font_family_bg);
   text-align:center;
   border-radius: 10px;
 }
 
 .Customise_font_family p:hover{
   cursor:pointer;
-  background-color: #c7c6c4;
+  background-color: var(--Customise_font_family_bg_hover);
+}
+
+.Customise_font_image{
+  width:0.8em;
+  height:0.8em;
 }
 
 .Customise_font_size p:hover{
   cursor:pointer;
-  background-color: #c7c6c4;
+  background-color: var(--Customise_font_family_bg_hover);
 }
 
 .Customise_logo div:hover{
   cursor:pointer;
-  background-color: #c7c6c4;
+  background-color: var(--Customise_font_family_bg_hover);
 }
 
 .Customise_logo_ag{
@@ -178,14 +221,12 @@
 
 .Customise nav ul{
   list-style-type: none;
+  
 }
 
 .Customise nav ul li{
   margin:1em 0em 1em 0em;
-}
-
-.Customise nav ul li a{
-  text-decoration: none;
+  
 }
 
 .Entire{
@@ -224,10 +265,11 @@
   border-radius:20px;
   border: var(--Entire_rem_border);
   background-color: rgb(201, 204, 207);
+  background-image: var(--Previous_bg_image);
 }
 
 .Previous_item_class{
-  background-color: #e7e6e3;
+  background-color: var(--Previous_item_class_bg);
   border-radius: 10px;
   margin-top:0.7em;
   display:flex;

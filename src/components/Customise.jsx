@@ -57,19 +57,19 @@ const Customise = (props) => {
             <nav>
 
              <ul>
-                <div className="toggle"> 
-                <li>Dark mode:</li>
+                <div className="toggle Customise_font_li"> 
+                <li>Dark mode
                 <div className="toggle_button">
 
                     <div onClick={toggleit} className="toggle_inner_circle">
 
                     </div>
 
-                </div>
+                </div></li>
                 </div>
 
 
-                <li className="Customise_font"><p>Font family</p>
+                <li className="Customise_font"><div className="Customise_font_li"><p>Font family</p><img className="Customise_font_image" src="/images/d_arrow.png"></img></div>
                 
                 <div className="Customise_font_family"> 
                 <p onClick={Customise_set_font}>Sansserif</p>
@@ -80,7 +80,7 @@ const Customise = (props) => {
                 </div>
                 
                 </li>
-                <li className="Customise_fsize"><p>Font-size</p>
+                <li className="Customise_fsize"><div className="Customise_font_li"><p>Font Size</p><img className="Customise_font_image" src="/images/d_arrow.png"></img></div>
                 
                 <div className="Customise_font_size">
                 <p onClick={Customise_set_sizef}>0.8em</p>
@@ -90,7 +90,7 @@ const Customise = (props) => {
                 
                 </li>
 
-                <li className="Customise_clogo"><p>Choose Logo</p>
+                <li className="Customise_clogo"><div className="Customise_font_li"><p>Choose logo</p><img className="Customise_font_image" src="/images/d_arrow.png"></img></div>
                 
                 <div className="Customise_logo">
 
