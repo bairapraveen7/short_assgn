@@ -5,7 +5,7 @@ const Content = (props) => {
 
     const Questions = props.Questions;
 
-    console.log(Questions);
+    const Variables = props.Variables;
 
     return (
         <div className="Content">
@@ -14,7 +14,7 @@ const Content = (props) => {
             Questions.map((eachq) => {
                 return (
 
-                    <Que_box array={["./images/P_logo.jpeg",eachq,"./images/ag.png","Hai Praveen, I am doing good! What about You?"]}/>
+                    <Que_box array={[Variables[0],eachq,"./images/ag.png","Hai Praveen, I am doing good! What about You?",Variables[1],Variables[2],Variables[3]]}/>
 
                 );
 

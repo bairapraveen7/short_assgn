@@ -10,6 +10,8 @@ const Chat = (props) => {
 
     const Questions = props.Questions;
 
+    const Variables = props.Variables;
+
     const submit = () => {
 
         const quest = document.getElementsByClassName("Chat_input")[0].value;
@@ -24,10 +26,10 @@ const Chat = (props) => {
 
     return (
         <div className="Chat">
-        <Content Questions={Questions}/>
+        <Content Questions={Questions} Variables={Variables}/>
         
         <div className="Chat_img_input">
-        <img className="Chat_img" src="./images/P_logo.jpeg" alt="Person_logo"></img>
+        <img className="Chat_img" src={Variables[0]} alt="Person_logo"></img>
         <input className="Chat_input" type="text" onKeyDown={ (e) => {e.key == "Enter" && submit()}}></input>
         <img className="Chat_img" src="./images/send.jpeg" onClick={submit} alt="Send logo"></img>
         </div>

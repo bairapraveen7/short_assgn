@@ -14,6 +14,12 @@ function App() {
 
   const [Que_arr,setArr] = useState([]);
 
+  const [P_logo,setPlogo] = useState("/images/P_logo.jpeg");
+
+  const [F_family,setFamily] = useState("Sansserif");
+
+  const [F_size,setFsize] = useState("1em");
+
   useEffect(() => {
     console.log(Que_arr)
   },[Que_arr]);
@@ -25,8 +31,8 @@ function App() {
     
     <div className='Entire'>
     <Stats Prev_que={Que_arr} />
-    <Chat setAppquest={setAppquest} setArr={setArr} Questions={Que_arr}/>
-    <Customise />
+    <Chat setAppquest={setAppquest} setArr={setArr} Questions={Que_arr} Variables={[P_logo,F_family,F_size]}/>
+    <Customise Functions={[setPlogo,setFamily,setFsize]}/>
     </div>
 
     </>

@@ -4,8 +4,6 @@ function Que_box(props){
 
     const arr = props.array;
 
-    console.log(arr);
-
     return (
         <>
         <div className="grid1">
@@ -21,7 +19,7 @@ function Que_box(props){
         </div>
 
         <div className="grid4">
-            <p className="Chat_output_p">{arr[3]}</p>
+            <p className="Chat_output_p" style={{fontFamily:arr[4],fontSize:arr[5]}}>{arr[3]}</p>
         </div>
 
         
