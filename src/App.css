@@ -1,7 +1,6 @@
 
 :root{
-  --Entire_background_color: none;
-  --Entire_background_image: none;
+  --Entire_background_image: linear-gradient(to bottom,#92d6f5,white);;
   --Entire_text_color:black;
   --Entire_chat_border:none;
   --Entire_rem_border:none;
@@ -23,7 +22,7 @@
 [dark-theme="dark"]{
 
   --Entire_background_color: #2d3436;
-  --Entire_background_image:linear-gradient(315deg, #2d3436 0%, #000000 74%);
+  --Entire_background_image:linear-gradient(315deg, black 0%, #051828 74%);
   --Entire_text_color:white;
   --Entire_chat_border:2px solid white;
   --Entire_rem_border:2px solid wheat;
@@ -46,15 +45,15 @@
 *{
   margin:0;
   padding:0;
- 
+  
   color:var(--Entire_text_color);
 }
 
 body{
+  
   background-color: var(--Entire_background_color);
   background-image: var(--Entire_background_image);
-  background-color: #F5F5F5;
-  color:var(--Entire_text_color)
+  color:var(--Entire_text_color);
 }
 
 .Chat{
@@ -388,6 +387,7 @@ some properties */
     position: relative;
     width: 100%;
   }
+  
 }
 
 
@@ -399,6 +399,10 @@ some properties */
 
   .Par_Customise_image{
     display: none;
+  }
+
+  .Comm_prev_del{
+    display:none;
   }
 
   .fe_start_row{
