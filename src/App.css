@@ -116,13 +116,16 @@ body{
 
 .Comm_prev{
   margin-left: 1em;
+  padding:0.5em;
   width:25%;
+  transition : width 2s;
 }
 
 .Comm_prev_del_image{
   position: relative;
-  left:2em;
-  border:2px solid black;
+  border:1px solid white;
+  border-radius: 0.2em;
+  margin-left:0.2em;
   width:1.5em;
   height:1.5em;
 }
@@ -175,14 +178,14 @@ body{
   height:500px;
   padding:1em 0.5em;
   position: relative;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    border: var(--Entire_rem_border);
-    background-color: gainsboro;
-    background-image: var(--Customise_bg_image);
-    border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: var(--Entire_rem_border);
+  background-color: gainsboro;
+  background-image: var(--Customise_bg_image);
+  border-radius: 20px;
 }
 
 .Customise_font:hover .Customise_font_family{
@@ -302,15 +305,12 @@ body{
 }
 
 .Par_Customise_image{
-  border:2px solid black;
+  border:2px solid rgb(251, 249, 249);
+  border-radius: 0.2em;
   position: relative;
+  padding:0.2em;
   right:5em;
   top:-3em;
-}
-
-.Par_customise_del_image{
-  width:1.2em;
-  height:1.2em;
 }
 
 .Par_customise_mob{
@@ -376,6 +376,9 @@ some properties */
 @media screen and (max-width:600px) {
   .Comm_prev,.Customise{
    border : 2px solid rgb(68, 66, 63);
+   background-color: #071418;
+   width:45%;
+   display: none;
    border-radius: 1em;
    position: absolute;
   }
@@ -387,14 +390,6 @@ some properties */
 
 
 @media screen and (min-width:600px) {
-
-  .Comm_prev{
-    display:block;
-   }
-
-   .Customise{
-    display:flex;
-   }
 
   .fe_start_row_image{
     display: none;

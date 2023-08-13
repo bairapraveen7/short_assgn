@@ -12,7 +12,7 @@ import { faBars, faGear } from '@fortawesome/free-solid-svg-icons';
 function App() {
 
 
-  const [quest,setAppquest] = useState();
+  const [Window_width,setAppquest] = useState(Window.innerWidth);
 
   const [Que_arr,setArr] = useState([]);
 
@@ -22,11 +22,12 @@ function App() {
 
   const [F_size,setFsize] = useState("1em");
 
-  const Comm_prev = document.getElementsByClassName("Comm_prev")[0];
+  function updateStyles(){
+
+    const Comm_prev = document.getElementsByClassName("Comm_prev")[0];
 
   const Customise_change = document.getElementsByClassName("Customise")[0];
 
-  function updateStyles(){
 
     if(window.innerWidth>600){
       if(Comm_prev!=undefined)
@@ -44,17 +45,26 @@ function App() {
   }
 
   function open_Common(){
+    const Comm_prev = document.getElementsByClassName("Comm_prev")[0];
+
       Comm_prev.style.display = 'flex';
       Comm_prev.style.zIndex = '1';
   }
 
   function open_Customise(){
 
+     
+
+  const Customise_change = document.getElementsByClassName("Customise")[0];
+
+
       Customise_change.style.display = 'flex';
       Customise_change.style.right = '0';
       Customise_change.style.zIndex = '1';
 
   }
+
+  updateStyles();
 
   window.addEventListener("resize",updateStyles);
 
