@@ -1,6 +1,8 @@
 import React from "react";
 import Common from "./Status_sub/Common";
 import Previous from "./Status_sub/Previous";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faXmark } from "@fortawesome/free-solid-svg-icons";
 
 const Stats = (props) => {
 
@@ -19,7 +21,7 @@ const Stats = (props) => {
         <Previous Prev_que={Prev_que}/>
         </div>
         <div className="Comm_prev_del" onClick={del_comm_prev}>
-            <img className="Comm_prev_del_image" src="/images/ag.png"></img>
+            <FontAwesomeIcon className="Comm_prev_del_image" icon={faXmark} />
         </div>
         
         </div>

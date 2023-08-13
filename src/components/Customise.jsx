@@ -1,3 +1,5 @@
+import { faXmark } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React from "react";
 import "typeface-roboto"
 
@@ -50,10 +52,18 @@ const Customise = (props) => {
         
     }
 
-    return (
-      <div className="Par_Customise_mob">
+    function rem_customise(){
+      const Customise = document.getElementsByClassName("Customise")[0];
+      Customise.style.display = 'none';
+    }
 
+    return (
         <div className="Customise">
+
+<div className="Par_Customise_image" onClick={rem_customise}>
+         <FontAwesomeIcon icon={faXmark} />
+      </div>
+
             <h4>Customise</h4>
 
             <nav>
@@ -121,13 +131,9 @@ const Customise = (props) => {
              </div>
 
             </nav>
+
+           
          
-          </div>
-
-          <div className="Par_Customise_image">
-        <img className="Par_customise_del_image" src="/images/ag.png"></img>
-      </div>
-
           </div>
     )
 

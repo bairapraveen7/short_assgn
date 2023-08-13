@@ -6,6 +6,8 @@ import Chat from './components/Chat';
 import Content from './components/Content';
 import Customise from './components/Customise';
 import Stats from './components/Stats';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faBars, faGear } from '@fortawesome/free-solid-svg-icons';
 
 function App() {
 
@@ -20,34 +22,49 @@ function App() {
 
   const [F_size,setFsize] = useState("1em");
 
-  useEffect(() => {
-    console.log(Que_arr)
-  },[Que_arr]);
+  const Comm_prev = document.getElementsByClassName("Comm_prev")[0];
+
+  const Customise_change = document.getElementsByClassName("Customise")[0];
+
+  function updateStyles(){
+
+    if(window.innerWidth>600){
+      if(Comm_prev!=undefined)
+      Comm_prev.style.display = 'block';
+      if(Customise_change!=undefined)
+      Customise_change.style.display = 'flex';
+    }
+    else{
+      if(Comm_prev!=undefined)
+      Comm_prev.style.display = 'none';
+      if(Customise_change!=undefined)
+      Customise_change.style.display = 'none';
+    }
+
+  }
 
   function open_Common(){
-      const Comm_prev = document.getElementsByClassName("Comm_prev")[0];
-      console.log(Comm_prev);
       Comm_prev.style.display = 'flex';
       Comm_prev.style.zIndex = '1';
   }
 
   function open_Customise(){
 
-    const Comm_prev = document.getElementsByClassName("Customise")[0];
-      console.log(Comm_prev);
-      Comm_prev.style.display = 'flex';
-      Comm_prev.style.right = '0';
-      Comm_prev.style.zIndex = '1';
+      Customise_change.style.display = 'flex';
+      Customise_change.style.right = '0';
+      Customise_change.style.zIndex = '1';
 
   }
+
+  window.addEventListener("resize",updateStyles);
 
   return (
     <>
     
     <div className='fe_start_row'>
-    <img className='fe_start_row_image' src="/images/ag.png" onClick={open_Common}></img>
+    <FontAwesomeIcon className='fe_start_row_image' onClick={open_Common} icon={faBars} />
     <h1 style={{"textAlign":"center","margin":"0.5em"}}>Aganitha's chatbot</h1>
-    <img className='fe_start_row_image' src="/images/ag.png" onClick={open_Customise}></img>
+   <FontAwesomeIcon className='fe_start_row_image'  onClick={open_Customise} icon={faGear} />
     </div>
     <div className='Entire'>
     <Stats Prev_que={Que_arr} />
