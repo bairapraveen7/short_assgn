@@ -83,8 +83,8 @@ body{
 }
 
 .Chat_img{
-  width:1.2em;
-  height:1.2em;
+  width:2em;
+  height:2em;
   border-radius: 1em;
   filter: var(--filtering_img);
 }
@@ -92,6 +92,8 @@ body{
 .Chat_input{
   width:100%;
   margin:0.5em;
+  height: 3em;
+  border-radius:0.6em ;
   border: 2px solid wheat;
   background-color:var(--Customise_font_family_bg);
 }
@@ -99,7 +101,6 @@ body{
 .Chat_img_input{
   display: flex;
   align-items: center;
-  margin:2em;
   isolation: isolate;
 }
 
@@ -116,6 +117,8 @@ body{
 
 .Comm_prev{
   margin-left: 1em;
+  background-color: aliceblue;
+  background-image: var(--Chat_bg_image);
   padding:0.5em;
   width:25%;
   transition : width 2s;
@@ -180,7 +183,6 @@ body{
   position: relative;
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
   border: var(--Entire_rem_border);
   background-color: gainsboro;
@@ -305,12 +307,13 @@ body{
 }
 
 .Par_Customise_image{
-  border:2px solid rgb(251, 249, 249);
+  border:1px solid white;
+  height:2em;
+  width:2em;
+  margin-bottom:1em;
   border-radius: 0.2em;
   position: relative;
   padding:0.2em;
-  right:5em;
-  top:-3em;
 }
 
 .Par_customise_mob{
@@ -376,7 +379,6 @@ some properties */
 @media screen and (max-width:600px) {
   .Comm_prev,.Customise{
    border : 2px solid rgb(68, 66, 63);
-   background-color: #071418;
    width:45%;
    display: none;
    border-radius: 1em;
