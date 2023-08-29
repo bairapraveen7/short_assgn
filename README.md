@@ -1,5 +1,7 @@
 # Getting Started with Create React App
 
+# Switching to react is very important now a days
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
